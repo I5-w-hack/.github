@@ -38,28 +38,30 @@
 1. 동기화
 
    - 로컬 main 브랜치로 이동 
-        ```
+        ``` bash
         git switch main
         ```
    - 원본(upstream)의 최신 코드를 pull
-        ```
+        ``` bash
         git pull upstream main
         ```
+        
 2. 작업 및 커밋
-         ```
-         git add .
-         git commit -m "feat: 기능 설명"
-         ```
-3. 내 포크(origin)에 푸시
-         ```
-         git push origin
-         ```
-4. Pull Request (PR) 생성 (GitHub)
-      - GitHub의 본인 포크 레포(My-Username/I5_back)or(My-Username/I5_front)페이지로 이동
+      ``` bash
+      git add .
+      git commit -m "feat: 기능 설명"
+      ```
+   
+4. 내 포크(origin)에 푸시
+      ``` bash
+      git push origin
+      ```
+5. Pull Request (PR) 생성 (GitHub)
+      - GitHub의 본인 포크 레포 페이지로 이동
       - main 브랜치가 푸시되었다는 알림("main had recent pushes")에서 [Compare & pull request] 버튼을 클릭
    
       - 병합 방향 확인
-          -Base: I5-w-hack/I5_back(front) (원본) main
+          - Base: I5-w-hack/I5_back(front) (원본) main
           - Head: My-Username/I5_back(front) (내 포크) main
    
       - PR 제목과 설명을 작성하고 PR을 생성
@@ -72,39 +74,39 @@
 1. 동기화
 
    - 로컬 main 브랜치로 이동 
-        ```
+        ```bash
         git switch main
         ```
    - 원본(upstream)의 최신 코드를 pull
-        ```
+        ```bash
         git pull upstream main
         ```
 
 2. 기능 브랜치 생성
-         ```
-         git switch -c feature/[기능명]
-         ```
+      ``` bash
+      git switch -c feature/[기능명]
+      ```
 
-3. 작업 및 커밋
-         ```
-         git add .
-         git commit -m "feat: 기능 설명"
-         ```
-4. 내 포크(origin)에 푸시
+4. 작업 및 커밋
+      ``` bash
+      git add .
+      git commit -m "feat: 기능 설명"
+      ```
+6. 내 포크(origin)에 푸시
       -  새 브랜치를 처음 푸시할 때 (-u 옵션)
-         ```
+         ``` bash
          git push -u origin feature/[기능명]
          ```
       - 이후 해당 브랜치에서 추가 작업 푸시
-         ```
+         ``` bash
          git push origin
          ```
-5. Pull Request (PR) 생성 (GitHub)
-      - GitHub의 본인 포크 레포(My-Username/I5_back)or(My-Username/I5_front)페이지로 이동
+7. Pull Request (PR) 생성 (GitHub)
+      - GitHub의 본인 포크 레포 페이지로 이동
       - feature/[기능명] 브랜치가 푸시되었다는 알림에서 [Compare & pull request] 버튼을 클릭
    
       - 병합 방향 확인
-          -Base: I5-w-hack/I5_back(front) (원본) main
+          - Base: I5-w-hack/I5_back(front) (원본) main
           - Head: My-Username/I5_back(front) (내 포크) feature/[기능명]
    
       - PR 제목과 설명을 작성하고 PR을 생성
